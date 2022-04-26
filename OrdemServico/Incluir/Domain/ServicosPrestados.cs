@@ -1,45 +1,16 @@
-using Newtonsoft.Json;
-
 namespace omie_poc.OrdemServico
 {
     public class ServicosPrestados
     {
-        [JsonProperty("cCodServLC116")]
-        public string CodigoServicoLC116 { get; set; }
-
-
-        [JsonProperty("cCodServMun")]
-        public string CodigoServicoMun { get; set; }
-
-
-        [JsonProperty("cDadosAdicItem")]
-        public string CodigoDadosAdicItem { get; set; }
-
-
-        [JsonProperty("cDescServ")]
-        public string CodigoDescricaoServico { get; set; }
-
-
-        [JsonProperty("cRetemISS")]
+        public string cCodServLC116 { get; set; }
+        public string cCodServMun { get; set; }
+        public string cDadosAdicItem { get; set; }
+        public string cDescServ { get; set; }
         public string cRetemISS { get; set; }
-
-
-        [JsonProperty("cTribServ")]
-        public string CodigoTribServ { get; set; }
-
-
-        [JsonProperty("nQtde")]
-        public int Quantidade { get; set; }
-
-
-        [JsonProperty("nValUnit")]
-        public int ValorUnitario { get; set; }
-
-
-
-        [JsonProperty("nCodServico")]
-        public int? CodigoServico { get; set; }
-        
+        public string cTribServ { get; set; }
+        public int nQtde { get; set; }
+        public int nValUnit { get; set; }
+        public int? nCodServico { get; set; }
         public Impostos impostos { get; set; }
     }
 }

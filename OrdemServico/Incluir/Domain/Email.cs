@@ -1,18 +1,9 @@
-using Newtonsoft.Json;
-
 namespace omie_poc.OrdemServico
 {
     public class Email
     {
-        [JsonProperty("cEnvBoleto")]
-        public string EnvioBoleto { get; set; }
-
-
-        [JsonProperty("cEnvLink")]
-        public string EnviarLink { get; set; }
-
-
-        [JsonProperty("cEnviarPara")]
-        public string EnviarPara { get; set; }
+        public string cEnvBoleto { get; set; }
+        public string cEnvLink { get; set; }
+        public string cEnviarPara { get; set; }
     }
 }

@@ -4,26 +4,26 @@ using omie_poc.OrdemServico.Incluir;
 
 namespace omie_poc.Controllers
 {
-    public class OmieController
+    [Route("incluirOS")]
+    [ApiController]
+    public class OmieController : ControllerBase
     {
-        private OrdemDeServico _ordemDeServico;
+        private OrdensDeServico _ordem;
 
-        public OmieController(OrdemDeServico ordemDeServico)
+        public OmieController(OrdensDeServico ordemDeServico)
         {
-            _ordemDeServico = ordemDeServico;
+            _ordem = ordemDeServico;
         }
-
-        [Route("api/[controller]")]
-        [ApiController]
-        public class NameController : ControllerBase
+        [HttpPost]
+        public IActionResult CriarOS(OrdemDeServicoRequest request)
         {
-            
-            // [HttpPost]
-            // public async Task PostAsync()
-            // {
-            //     var ordemServico = _ordemDeServico.Get();
-            //     return Ok();
-            // }
+            if (request != null)
+            {
+                var ordemDeServico = _ordem.Criar(request);
+                return Ok();
+            }
+            return BadRequest();
+
         }
     }
 }

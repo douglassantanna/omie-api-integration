@@ -1,20 +1,13 @@
-using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace omie_poc.OrdemServico.Incluir
 {
     public class OrdemDeServicoRequest
     {
-        [JsonProperty("app_key")]
-        public string AppKey { get; set; }
-
-        [JsonProperty("app_secret")]
-        public string AppSecret { get; set; }
-
-        [JsonProperty("call")]
+        public long App_key { get; set; }
+        public string App_secret { get; set; }
         public string Call { get; set; }
+        public List<OrdemDeServicoBase> Param { get; set; }
 
-        [JsonProperty("param")]
-        public OrdemDeServicoBase Param { get; set; }
-        
     }
 }

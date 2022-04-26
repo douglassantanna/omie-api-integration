@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HhOCGK6QKIFMv0XRg0YziYaEIjud3jz7jFgBbc3lzXltqQ2KMk/CRePJeoSy45cJmzbIDdq89fzn3xd+/UvOug==",
+  "dgSpecHash": "N/pw5GpMbrf7tPEFPGyuzaugQhurOpDK2mL3MxTMr2Rt+jtuOqq/onVMDw+GKUaZ0oG8Im7WzU5+9dqAooPNsQ==",
   "success": true,
-  "projectFilePath": "c:\\Clouddata\\POCS\\omie-poc\\omie-poc.csproj",
+  "projectFilePath": "C:\\Clouddata\\POCS\\omie-poc\\omie-poc.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DouglasCraici\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\DouglasCraici\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

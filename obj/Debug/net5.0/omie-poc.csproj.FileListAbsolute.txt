@@ -27,3 +27,5 @@ C:\Clouddata\POCS\omie-poc\obj\Debug\net5.0\omie-poc.dll
 C:\Clouddata\POCS\omie-poc\obj\Debug\net5.0\ref\omie-poc.dll
 C:\Clouddata\POCS\omie-poc\obj\Debug\net5.0\omie-poc.pdb
 C:\Clouddata\POCS\omie-poc\obj\Debug\net5.0\omie-poc.genruntimeconfig.cache
+C:\Clouddata\POCS\omie-poc\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Clouddata\POCS\omie-poc\bin\Debug\net5.0\Refit.dll

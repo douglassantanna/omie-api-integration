@@ -1,31 +1,12 @@
-using Newtonsoft.Json;
-
 namespace omie_poc.OrdemServico
 {
     public class Cabecalho
     {
-        [JsonProperty("nCodOS")]
-        public string CodigoOS { get; set; }
-
-
-        [JsonProperty("cCodParc")]
-        public string CodigoParc { get; set; }
-
-
-        [JsonProperty("cEtapa")]
-        public string CodigoEtapa { get; set; }
-
-
-        [JsonProperty("dDtPrevisao")]
-        public string DataPrevisao { get; set; }
-
-
-        [JsonProperty("nCodCli")]
-        public int CodigoCliente { get; set; }
-
-
-        [JsonProperty("nQtdeParc")]
-        public int QuantidadeParc { get; set; }
-
+        public string nCodOS { get; set; }
+        public string cCodParc { get; set; }
+        public string cEtapa { get; set; }
+        public string dDtPrevisao { get; set; }
+        public int nCodCli { get; set; }
+        public int nQtdeParc { get; set; }
     }
 }
