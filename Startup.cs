@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using omie_poc.Conta;
 using omie_poc.OrdemServico.Incluir;
 
 namespace omie_poc
@@ -27,9 +28,14 @@ namespace omie_poc
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddHttpClient<OrdemDeServicoRequest, OrdemDeServicoRequest>("incluirOS", (x) =>
+            // services.AddScoped<IContas, Contas>();
+            // services.AddHttpClient<OrdemDeServicoRequest, OrdemDeServicoRequest>("incluirOS", (x) =>
+            // {
+            //     x.BaseAddress = new Uri("https://app.omie.com.br/api/v1/servicos/os/");
+            // });
+            services.AddHttpClient<IContas, Contas>((x) =>
             {
-                x.BaseAddress = new Uri("https://app.omie.com.br/api/v1/servicos/os/");
+                x.BaseAddress = new Uri("https://app.omie.com.br/api/v1/crm/contas/");
             });
             services.AddControllers();
             services.AddSwaggerGen(c =>

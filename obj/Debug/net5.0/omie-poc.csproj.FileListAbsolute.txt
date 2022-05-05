@@ -5,7 +5,6 @@ C:\Clouddata\POCS\omie-poc\bin\Debug\net5.0\omie-poc.deps.json
 C:\Clouddata\POCS\omie-poc\bin\Debug\net5.0\omie-poc.runtimeconfig.json
 C:\Clouddata\POCS\omie-poc\bin\Debug\net5.0\omie-poc.runtimeconfig.dev.json
 C:\Clouddata\POCS\omie-poc\bin\Debug\net5.0\omie-poc.dll
-C:\Clouddata\POCS\omie-poc\bin\Debug\net5.0\ref\omie-poc.dll
 C:\Clouddata\POCS\omie-poc\bin\Debug\net5.0\omie-poc.pdb
 C:\Clouddata\POCS\omie-poc\bin\Debug\net5.0\Microsoft.OpenApi.dll
 C:\Clouddata\POCS\omie-poc\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
@@ -19,7 +18,6 @@ C:\Clouddata\POCS\omie-poc\obj\Debug\net5.0\omie-poc.csproj.CoreCompileInputs.ca
 C:\Clouddata\POCS\omie-poc\obj\Debug\net5.0\omie-poc.MvcApplicationPartsAssemblyInfo.cs
 C:\Clouddata\POCS\omie-poc\obj\Debug\net5.0\omie-poc.MvcApplicationPartsAssemblyInfo.cache
 C:\Clouddata\POCS\omie-poc\obj\Debug\net5.0\staticwebassets\omie-poc.StaticWebAssets.Manifest.cache
-C:\Clouddata\POCS\omie-poc\obj\Debug\net5.0\staticwebassets\omie-poc.StaticWebAssets.xml
 C:\Clouddata\POCS\omie-poc\obj\Debug\net5.0\scopedcss\bundle\omie-poc.styles.css
 C:\Clouddata\POCS\omie-poc\obj\Debug\net5.0\omie-poc.RazorTargetAssemblyInfo.cache
 C:\Clouddata\POCS\omie-poc\obj\Debug\net5.0\omie-poc.csproj.CopyComplete
@@ -29,3 +27,4 @@ C:\Clouddata\POCS\omie-poc\obj\Debug\net5.0\omie-poc.pdb
 C:\Clouddata\POCS\omie-poc\obj\Debug\net5.0\omie-poc.genruntimeconfig.cache
 C:\Clouddata\POCS\omie-poc\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Clouddata\POCS\omie-poc\bin\Debug\net5.0\Refit.dll
+C:\Clouddata\POCS\omie-poc\obj\Debug\net5.0\refint\omie-poc.dll
