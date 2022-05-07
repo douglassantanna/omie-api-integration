@@ -17,36 +17,26 @@ namespace omie_poc.Conta
             _http = http;
             _logger = logger;
         }
-        public async Task<ContaResponse> GetContas(ContaRequest request)
+
+        public async Task<ContaRequest> GetContas(ContaRequest contentRequest)
         {
-            var opt = new JsonSerializerOptions()
-            {
-                WriteIndented = true,
-                PropertyNameCaseInsensitive = true
-            };
-            //converter em json
-            var jsonRequest = JsonSerializer.Serialize<ContaRequest>(request, opt);
+            var jsonRequest = JsonSerializer.Serialize<ContaRequest>(contentRequest);
+            var stringRequest = new StringContent(jsonRequest);
+            var stringResponse = await stringRequest.ReadAsStringAsync();
+            var response = await GetContasSoap(stringRequest).Result;
 
-            //converter em string
-            var stringRequest = new StringContent(jsonRequest, Encoding.UTF8, "application/json");
+            return response;
+        }
 
-            //chamada post na uri e armazenando em result
-            var response = await _http.PostAsync(_http.BaseAddress, stringRequest);
-
-            //o resultado de result é lido como string e armazenado em resultString
-            var resultString = await response.Content.ReadAsStringAsync();
-
-            if (response.IsSuccessStatusCode)
-            {
-                var stringResponse = JsonSerializer.Deserialize<ContaResponse>(resultString, new JsonSerializerOptions()
-                {
-                    PropertyNameCaseInsensitive = true
-                });
-                _logger.LogInformation("sucesso");
-                return stringResponse;
-            }
-            _logger.LogInformation("falha");
-            return null;
+        private async Task<string> GetContasSoap(string request)
+        {
+            var content = new StringContent(request, Encoding.UTF8, "text/xml");
+            var contentRequest = new HttpRequestMessage(HttpMethod.Post, _http.BaseAddress);
+            contentRequest.Headers.Add("SOAPAction", "");
+            contentRequest.Content = content;
+            var responseRequest = await _http.SendAsync(contentRequest, HttpCompletionOption.ResponseHeadersRead);
+            var responseRequestString = await responseRequest.Content.ReadAsStringAsync();
+            return responseRequestString;
         }
     }
 }
