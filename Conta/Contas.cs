@@ -3,6 +3,7 @@ using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using Flurl.Http;
 using Microsoft.Extensions.Logging;
 
 namespace omie_poc.Conta
@@ -18,25 +19,26 @@ namespace omie_poc.Conta
             _logger = logger;
         }
 
-        public async Task<ContaRequest> GetContas(ContaRequest contentRequest)
+        public async Task<ContaResponse> GetContas(ContaRequest request)
         {
-            var jsonRequest = JsonSerializer.Serialize<ContaRequest>(contentRequest);
-            var stringRequest = new StringContent(jsonRequest);
-            var stringResponse = await stringRequest.ReadAsStringAsync();
-            var response = await GetContasSoap(stringRequest).Result;
+            var response = "https://app.omie.com.br/api/v1/crm/contas/".WithHeader();
+            // var opt = new JsonSerializerOptions() { PropertyNameCaseInsensitive = true, WriteIndented = true };
+            // var requestString = JsonSerializer.Serialize(request);
+            // var requestContent = new StringContent(requestString, Encoding.UTF8, "application/json");
 
-            return response;
-        }
+            // var result = await _http.PostAsync(_http.BaseAddress, requestContent);
 
-        private async Task<string> GetContasSoap(string request)
-        {
-            var content = new StringContent(request, Encoding.UTF8, "text/xml");
-            var contentRequest = new HttpRequestMessage(HttpMethod.Post, _http.BaseAddress);
-            contentRequest.Headers.Add("SOAPAction", "");
-            contentRequest.Content = content;
-            var responseRequest = await _http.SendAsync(contentRequest, HttpCompletionOption.ResponseHeadersRead);
-            var responseRequestString = await responseRequest.Content.ReadAsStringAsync();
-            return responseRequestString;
+            // var resultString = await result.Content.ReadAsByteArrayAsync();
+            // if (result.IsSuccessStatusCode)
+            // {
+            //     var response = JsonSerializer.Deserialize<ContaResponse>(resultString, new JsonSerializerOptions()
+            //     {
+            //         PropertyNameCaseInsensitive = true,
+            //         WriteIndented = true
+            //     });
+            //     return response;
+            // }
+            // return null;
         }
     }
 }

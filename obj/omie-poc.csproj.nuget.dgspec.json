@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Clouddata\\POCS\\omie-poc\\omie-poc.csproj": {}
+    "c:\\Clouddata\\POCS\\omie-poc\\omie-poc.csproj": {}
   },
   "projects": {
-    "C:\\Clouddata\\POCS\\omie-poc\\omie-poc.csproj": {
+    "c:\\Clouddata\\POCS\\omie-poc\\omie-poc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Clouddata\\POCS\\omie-poc\\omie-poc.csproj",
+        "projectUniqueName": "c:\\Clouddata\\POCS\\omie-poc\\omie-poc.csproj",
         "projectName": "omie-poc",
-        "projectPath": "C:\\Clouddata\\POCS\\omie-poc\\omie-poc.csproj",
+        "projectPath": "c:\\Clouddata\\POCS\\omie-poc\\omie-poc.csproj",
         "packagesPath": "C:\\Users\\DouglasCraici\\.nuget\\packages\\",
-        "outputPath": "C:\\Clouddata\\POCS\\omie-poc\\obj\\",
+        "outputPath": "c:\\Clouddata\\POCS\\omie-poc\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DouglasCraici\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -21,7 +21,6 @@
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -40,6 +39,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Flurl": {
+              "target": "Package",
+              "version": "[3.0.5, )"
+            },
+            "Flurl.Http": {
+              "target": "Package",
+              "version": "[3.2.3, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"
@@ -51,6 +58,26 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
+            },
+            "System.ServiceModel.Duplex": {
+              "target": "Package",
+              "version": "[4.8.*, )"
+            },
+            "System.ServiceModel.Federation": {
+              "target": "Package",
+              "version": "[4.8.*, )"
+            },
+            "System.ServiceModel.Http": {
+              "target": "Package",
+              "version": "[4.8.*, )"
+            },
+            "System.ServiceModel.NetTcp": {
+              "target": "Package",
+              "version": "[4.8.*, )"
+            },
+            "System.ServiceModel.Security": {
+              "target": "Package",
+              "version": "[4.8.*, )"
             }
           },
           "imports": [
@@ -71,7 +98,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

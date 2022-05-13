@@ -28,3 +28,16 @@ C:\Clouddata\POCS\omie-poc\obj\Debug\net5.0\omie-poc.genruntimeconfig.cache
 C:\Clouddata\POCS\omie-poc\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Clouddata\POCS\omie-poc\bin\Debug\net5.0\Refit.dll
 C:\Clouddata\POCS\omie-poc\obj\Debug\net5.0\refint\omie-poc.dll
+C:\Clouddata\POCS\omie-poc\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Clouddata\POCS\omie-poc\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.WsTrust.dll
+C:\Clouddata\POCS\omie-poc\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Clouddata\POCS\omie-poc\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.Saml.dll
+C:\Clouddata\POCS\omie-poc\bin\Debug\net5.0\Microsoft.IdentityModel.Xml.dll
+C:\Clouddata\POCS\omie-poc\bin\Debug\net5.0\System.Private.ServiceModel.dll
+C:\Clouddata\POCS\omie-poc\bin\Debug\net5.0\System.ServiceModel.Duplex.dll
+C:\Clouddata\POCS\omie-poc\bin\Debug\net5.0\System.ServiceModel.Federation.dll
+C:\Clouddata\POCS\omie-poc\bin\Debug\net5.0\System.ServiceModel.Http.dll
+C:\Clouddata\POCS\omie-poc\bin\Debug\net5.0\System.ServiceModel.NetTcp.dll
+C:\Clouddata\POCS\omie-poc\bin\Debug\net5.0\System.ServiceModel.Primitives.dll
+C:\Clouddata\POCS\omie-poc\bin\Debug\net5.0\System.ServiceModel.dll
+C:\Clouddata\POCS\omie-poc\bin\Debug\net5.0\System.ServiceModel.Security.dll

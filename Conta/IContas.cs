@@ -4,6 +4,6 @@ namespace omie_poc.Conta
 {
     public interface IContas
     {
-        Task<ContaRequest> GetContas(ContaRequest request);
+        Task<ContaResponse> GetContas(ContaRequest request);
     }
 }
