@@ -3370,11 +3370,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Clouddata\\POCS\\omie-poc\\omie-poc.csproj",
+      "projectUniqueName": "C:\\Clouddata\\POCS\\omie-poc\\omie-poc.csproj",
       "projectName": "omie-poc",
-      "projectPath": "c:\\Clouddata\\POCS\\omie-poc\\omie-poc.csproj",
+      "projectPath": "C:\\Clouddata\\POCS\\omie-poc\\omie-poc.csproj",
       "packagesPath": "C:\\Users\\DouglasCraici\\.nuget\\packages\\",
-      "outputPath": "c:\\Clouddata\\POCS\\omie-poc\\obj\\",
+      "outputPath": "C:\\Clouddata\\POCS\\omie-poc\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\DouglasCraici\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3384,6 +3384,7 @@
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

@@ -19,8 +19,8 @@ namespace omie_poc.Conta
         [HttpPost]
         public async Task<IActionResult> Get(ContaRequest contaRequest)
         {
-            var response = await _contas.GetContas(contaRequest);
-            return Ok($"retorn ok: {response}");
+            ContaResponse response = await _contas.GetContas(contaRequest);
+            return Ok(response);
         }
     }
 }

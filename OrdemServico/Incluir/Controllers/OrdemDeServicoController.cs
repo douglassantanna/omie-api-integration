@@ -2,19 +2,19 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using omie_poc.OrdemServico.Incluir;
 
-namespace omie_poc.Controllers
+namespace omie_poc.OrdemServico.Controllers
 {
-    [Route("incluirOS")]
+    [Route("ordem-servico")]
     [ApiController]
-    public class OmieController : ControllerBase
+    public class OrdemDeServicoController : ControllerBase
     {
         private OrdensDeServico _ordem;
 
-        public OmieController(OrdensDeServico ordemDeServico)
+        public OrdemDeServicoController(OrdensDeServico ordemDeServico)
         {
             _ordem = ordemDeServico;
         }
-        [HttpPost]
+        [HttpPost("incluirOS")]
         public IActionResult CriarOS(OrdemDeServicoRequest request)
         {
             if (request != null)

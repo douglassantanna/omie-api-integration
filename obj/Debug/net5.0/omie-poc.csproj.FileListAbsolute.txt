@@ -41,3 +41,5 @@ C:\Clouddata\POCS\omie-poc\bin\Debug\net5.0\System.ServiceModel.NetTcp.dll
 C:\Clouddata\POCS\omie-poc\bin\Debug\net5.0\System.ServiceModel.Primitives.dll
 C:\Clouddata\POCS\omie-poc\bin\Debug\net5.0\System.ServiceModel.dll
 C:\Clouddata\POCS\omie-poc\bin\Debug\net5.0\System.ServiceModel.Security.dll
+C:\Clouddata\POCS\omie-poc\bin\Debug\net5.0\Flurl.dll
+C:\Clouddata\POCS\omie-poc\bin\Debug\net5.0\Flurl.Http.dll

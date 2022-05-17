@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YTZOtIRvF4eT4iUeYf7RGjawI6zidlGPBBIswelC34U25iw3sshtcm9P560xLpeh8Aw3y1SG13D3RGUyfRkVlg==",
+  "dgSpecHash": "WzPmabORCrPQ65t2RdwCMAlP8DPVJ7CALGFHo47bUJ8n8GsLMY35+l6lh29Ra8N+M4Apw+vxzTSKLnKylxlQaw==",
   "success": true,
-  "projectFilePath": "c:\\Clouddata\\POCS\\omie-poc\\omie-poc.csproj",
+  "projectFilePath": "C:\\Clouddata\\POCS\\omie-poc\\omie-poc.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DouglasCraici\\.nuget\\packages\\flurl\\3.0.5\\flurl.3.0.5.nupkg.sha512",
     "C:\\Users\\DouglasCraici\\.nuget\\packages\\flurl.http\\3.2.3\\flurl.http.3.2.3.nupkg.sha512",
