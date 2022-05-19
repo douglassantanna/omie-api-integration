@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Clouddata\\POCS\\omie-poc\\omie-poc.csproj": {}
+    "C:\\Clouddata\\POCS\\omie-api-integration\\omie-poc.csproj": {}
   },
   "projects": {
-    "C:\\Clouddata\\POCS\\omie-poc\\omie-poc.csproj": {
+    "C:\\Clouddata\\POCS\\omie-api-integration\\omie-poc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Clouddata\\POCS\\omie-poc\\omie-poc.csproj",
+        "projectUniqueName": "C:\\Clouddata\\POCS\\omie-api-integration\\omie-poc.csproj",
         "projectName": "omie-poc",
-        "projectPath": "C:\\Clouddata\\POCS\\omie-poc\\omie-poc.csproj",
+        "projectPath": "C:\\Clouddata\\POCS\\omie-api-integration\\omie-poc.csproj",
         "packagesPath": "C:\\Users\\DouglasCraici\\.nuget\\packages\\",
-        "outputPath": "C:\\Clouddata\\POCS\\omie-poc\\obj\\",
+        "outputPath": "C:\\Clouddata\\POCS\\omie-api-integration\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DouglasCraici\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -47,14 +47,6 @@
             "Flurl.Http": {
               "target": "Package",
               "version": "[3.2.3, )"
-            },
-            "Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[13.0.1, )"
-            },
-            "Refit": {
-              "target": "Package",
-              "version": "[6.0.94, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

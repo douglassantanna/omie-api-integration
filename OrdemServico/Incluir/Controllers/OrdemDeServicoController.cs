@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using omie_api_integration.OrdemServico.Incluir;
 using omie_poc.OrdemServico.Incluir;
 
 namespace omie_poc.OrdemServico.Controllers
@@ -8,22 +9,17 @@ namespace omie_poc.OrdemServico.Controllers
     [ApiController]
     public class OrdemDeServicoController : ControllerBase
     {
-        private OrdensDeServico _ordem;
+        private readonly IOrdemDeServico _ordem;
 
-        public OrdemDeServicoController(OrdensDeServico ordemDeServico)
+        public OrdemDeServicoController(IOrdemDeServico ordemDeServico)
         {
             _ordem = ordemDeServico;
         }
-        [HttpPost("incluirOS")]
-        public IActionResult CriarOS(OrdemDeServicoRequest request)
+        [HttpPost]
+        public async Task<IActionResult> IncluirOS(OrdemDeServicoRequest request)
         {
-            if (request != null)
-            {
-                var ordemDeServico = _ordem.Criar(request);
-                return Ok();
-            }
-            return BadRequest();
-
+            var ordemDeServico = await _ordem.IncluirOS(request);
+            return Ok(ordemDeServico);
         }
     }
 }

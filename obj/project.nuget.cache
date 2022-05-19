@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WzPmabORCrPQ65t2RdwCMAlP8DPVJ7CALGFHo47bUJ8n8GsLMY35+l6lh29Ra8N+M4Apw+vxzTSKLnKylxlQaw==",
+  "dgSpecHash": "97Le+syw+GwbA5dRlnODYGFB6YfLfDuuZh13pABDJAXoceSDd1cNGzC9yJAfRtQ/KCQLo5XfIQWiVV6EmVzgcw==",
   "success": true,
-  "projectFilePath": "C:\\Clouddata\\POCS\\omie-poc\\omie-poc.csproj",
+  "projectFilePath": "C:\\Clouddata\\POCS\\omie-api-integration\\omie-poc.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DouglasCraici\\.nuget\\packages\\flurl\\3.0.5\\flurl.3.0.5.nupkg.sha512",
     "C:\\Users\\DouglasCraici\\.nuget\\packages\\flurl.http\\3.2.3\\flurl.http.3.2.3.nupkg.sha512",
@@ -17,8 +17,7 @@
     "C:\\Users\\DouglasCraici\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\DouglasCraici\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\DouglasCraici\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
-    "C:\\Users\\DouglasCraici\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
-    "C:\\Users\\DouglasCraici\\.nuget\\packages\\refit\\6.0.94\\refit.6.0.94.nupkg.sha512",
+    "C:\\Users\\DouglasCraici\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
     "C:\\Users\\DouglasCraici\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
     "C:\\Users\\DouglasCraici\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
     "C:\\Users\\DouglasCraici\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
@@ -30,7 +29,6 @@
     "C:\\Users\\DouglasCraici\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
     "C:\\Users\\DouglasCraici\\.nuget\\packages\\system.io.filesystem\\4.3.0\\system.io.filesystem.4.3.0.nupkg.sha512",
     "C:\\Users\\DouglasCraici\\.nuget\\packages\\system.io.filesystem.primitives\\4.3.0\\system.io.filesystem.primitives.4.3.0.nupkg.sha512",
-    "C:\\Users\\DouglasCraici\\.nuget\\packages\\system.net.http.json\\5.0.0\\system.net.http.json.5.0.0.nupkg.sha512",
     "C:\\Users\\DouglasCraici\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\DouglasCraici\\.nuget\\packages\\system.private.servicemodel\\4.8.1\\system.private.servicemodel.4.8.1.nupkg.sha512",
     "C:\\Users\\DouglasCraici\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",

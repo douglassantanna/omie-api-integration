@@ -1,34 +1,41 @@
-using System;
 using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using Flurl.Http;
+using Microsoft.Extensions.Logging;
+using omie_api_integration.OrdemServico.Incluir;
 
 namespace omie_poc.OrdemServico.Incluir
 {
-    public class OrdensDeServico
+    public class OrdensDeServico : IOrdemDeServico
     {
-        private HttpClient _httpClient;
+        private readonly HttpClient _httpClient;
+        private readonly ILogger<OrdemDeServicoResponse> _logger;
 
-        public OrdensDeServico(HttpClient httpClient)
+        public OrdensDeServico(HttpClient httpClient, ILogger<OrdemDeServicoResponse> logger)
         {
             _httpClient = httpClient;
+            _logger = logger;
         }
-
-        public async Task<OrdemDeServicoResponse> Criar(OrdemDeServicoRequest request)
+        public async Task<OrdemDeServicoResponse> IncluirOS(OrdemDeServicoRequest request)
         {
-            var requestContent = new StringContent(
-                JsonSerializer.Serialize(request),
-                Encoding.UTF8,
-                "application/json"
-            );
+            try
+            {
+                var response = await _httpClient.BaseAddress
+                .WithHeader("Content-type", "application/json")
+                .WithHeader("accept", "application/json")
+                .SendJsonAsync(HttpMethod.Post, request);
 
-            var result = await _httpClient.PostAsync(_httpClient.BaseAddress, requestContent);
-            string resultString = result.Content.ReadAsStringAsync().Result;
+                var responseString = await response.GetStringAsync();
+                var ordemDeServico = JsonSerializer.Deserialize<OrdemDeServicoResponse>(responseString);
+                return ordemDeServico;
+            }
+            catch (System.Exception ex)
+            {
+                _logger.LogError($"{ex.Message}");
+                return null;
+            }
 
-            var response = JsonSerializer.Deserialize<OrdemDeServicoResponse>(resultString);
-            return response;
         }
     }
 }

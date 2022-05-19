@@ -4,7 +4,7 @@ using Microsoft.Extensions.Logging;
 
 namespace omie_poc.Conta
 {
-    [Route("omie")]
+    [Route("conta")]
     [ApiController]
     public class ContaController : ControllerBase
     {
