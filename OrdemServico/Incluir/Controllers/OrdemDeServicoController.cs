@@ -5,8 +5,8 @@ using omie_poc.OrdemServico.Incluir;
 
 namespace omie_poc.OrdemServico.Controllers
 {
-    [Route("ordem-servico")]
     [ApiController]
+    [Route("ordem-servico")]
     public class OrdemDeServicoController : ControllerBase
     {
         private readonly IOrdemDeServico _ordem;
@@ -15,7 +15,7 @@ namespace omie_poc.OrdemServico.Controllers
         {
             _ordem = ordemDeServico;
         }
-        [HttpPost]
+        [HttpPost("incluir-os")]
         public async Task<IActionResult> IncluirOS(OrdemDeServicoRequest request)
         {
             var ordemDeServico = await _ordem.IncluirOS(request);

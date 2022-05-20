@@ -9,8 +9,8 @@ namespace omie_poc.OrdemServico
         public string cRetemISS { get; set; }
         public string cTribServ { get; set; }
         public int nQtde { get; set; }
-        public int nValUnit { get; set; }
-        public int? nCodServico { get; set; }
+        public double nValUnit { get; set; }
+        public int nCodServico { get; set; }
         public Impostos impostos { get; set; }
     }
 }

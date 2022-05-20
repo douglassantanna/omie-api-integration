@@ -2,7 +2,7 @@ namespace omie_poc.OrdemServico
 {
     public class Cabecalho
     {
-        public string nCodOS { get; set; }
+        public string cCodIntOS { get; set; }
         public string cCodParc { get; set; }
         public string cEtapa { get; set; }
         public string dDtPrevisao { get; set; }

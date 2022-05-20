@@ -2,6 +2,7 @@ using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Flurl.Http;
+using omie_api_integration.Shared;
 
 namespace omie_poc.Conta
 {
@@ -13,7 +14,7 @@ namespace omie_poc.Conta
             _http = http;
         }
 
-        public async Task<ContaResponse> GetContas(ContaRequest request)
+        public async Task<object> GetContas(ContaRequest request)
         {
             var response = await _http.BaseAddress
             .WithHeader("Content-type", "application/json")
@@ -21,8 +22,16 @@ namespace omie_poc.Conta
             .SendJsonAsync(HttpMethod.Post, request);
 
             var responseString = await response.GetStringAsync();
-            var conta = JsonSerializer.Deserialize<ContaResponse>(responseString);
-            return conta;
+
+            if (response.StatusCode != 200)
+            {
+                return new NotificationResult().Failure().AddMessage($"{responseString}");
+            }
+            else
+            {
+                var conta = JsonSerializer.Deserialize<ContaResponse>(responseString);
+                return new NotificationResult().Ok().ShowObject(conta);
+            }
         }
     }
 }

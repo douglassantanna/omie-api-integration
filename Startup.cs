@@ -34,6 +34,7 @@ namespace omie_poc
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
+                c.CustomSchemaIds(type => type.ToString());
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "omie_poc", Version = "v1" });
             });
         }
@@ -45,7 +46,7 @@ namespace omie_poc
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                // app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "omie_poc v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "omie_poc v1"));
             }
 
             app.UseHttpsRedirection();

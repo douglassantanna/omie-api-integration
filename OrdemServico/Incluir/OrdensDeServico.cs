@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Flurl.Http;
 using Microsoft.Extensions.Logging;
 using omie_api_integration.OrdemServico.Incluir;
+using omie_api_integration.Shared;
 
 namespace omie_poc.OrdemServico.Incluir
 {
@@ -17,25 +18,21 @@ namespace omie_poc.OrdemServico.Incluir
             _httpClient = httpClient;
             _logger = logger;
         }
-        public async Task<OrdemDeServicoResponse> IncluirOS(OrdemDeServicoRequest request)
+        public async Task<object> IncluirOS(OrdemDeServicoRequest request)
         {
-            try
-            {
-                var response = await _httpClient.BaseAddress
-                .WithHeader("Content-type", "application/json")
-                .WithHeader("accept", "application/json")
-                .SendJsonAsync(HttpMethod.Post, request);
+            var response = await _httpClient.BaseAddress
+            .WithHeader("Content-type", "application/json")
+            .WithHeader("accept", "application/json")
+            .SendJsonAsync(HttpMethod.Post, request);
 
-                var responseString = await response.GetStringAsync();
-                var ordemDeServico = JsonSerializer.Deserialize<OrdemDeServicoResponse>(responseString);
-                return ordemDeServico;
-            }
-            catch (System.Exception ex)
-            {
-                _logger.LogError($"{ex.Message}");
-                return null;
-            }
+            var responseString = await response.GetStringAsync();
 
+            if (response.StatusCode != 200)
+            {
+                return new NotificationResult().Failure().AddMessage($"{responseString}");
+            }
+            var ordemDeServico = JsonSerializer.Deserialize<OrdemDeServicoResponse>(responseString);
+            return new NotificationResult().Ok().ShowObject(ordemDeServico);
         }
     }
 }

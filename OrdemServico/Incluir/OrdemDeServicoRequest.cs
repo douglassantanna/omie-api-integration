@@ -16,6 +16,6 @@ namespace omie_poc.OrdemServico.Incluir
         public InformacoesAdicionais InformacoesAdicionais { get; set; }
         public Impostos Impostos { get; set; }
         public List<ServicosPrestados> ServicosPrestados { get; set; }
-        public List<Departamento> Departamento { get; set; }
+        public List<Departamento> Departamentos { get; set; }
     }
 }

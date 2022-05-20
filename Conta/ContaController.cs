@@ -4,22 +4,20 @@ using Microsoft.Extensions.Logging;
 
 namespace omie_poc.Conta
 {
-    [Route("conta")]
     [ApiController]
+    [Route("conta")]
     public class ContaController : ControllerBase
     {
         private readonly IContas _contas;
-        private readonly ILogger<ContaController> _logger;
-        public ContaController(IContas contas, ILogger<ContaController> logger)
+        public ContaController(IContas contas)
         {
             _contas = contas;
-            _logger = logger;
         }
 
-        [HttpPost]
+        [HttpPost("consultar-contas")]
         public async Task<IActionResult> Get(ContaRequest contaRequest)
         {
-            ContaResponse response = await _contas.GetContas(contaRequest);
+            var response = await _contas.GetContas(contaRequest);
             return Ok(response);
         }
     }

@@ -6,6 +6,6 @@ namespace omie_api_integration.OrdemServico.Incluir
 {
     public interface IOrdemDeServico
     {
-        Task<OrdemDeServicoResponse> IncluirOS(OrdemDeServicoRequest request);
+        Task<object> IncluirOS(OrdemDeServicoRequest request);
     }
 }
