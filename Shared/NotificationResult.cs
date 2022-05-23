@@ -1,10 +1,11 @@
+using System;
 using System.Collections.Generic;
+using Microsoft.Extensions.Logging;
 
 namespace omie_api_integration.Shared
 {
-    public record NotificationResult
+    public class NotificationResult
     {
-        public string Message { get; private set; }
         public List<string> Notifications { get; private set; } = new();
         public bool Success { get; private set; } = true;
         public object Object { get; private set; }
@@ -24,12 +25,7 @@ namespace omie_api_integration.Shared
             Notifications.Add(notification);
             return this;
         }
-        public NotificationResult AddMessage(string message)
-        {
-            Message = message;
-            return this;
-        }
-        public NotificationResult ShowObject(object showObject)
+        public NotificationResult ShowResult(object showObject, object teste = null)
         {
             Object = showObject;
             return this;

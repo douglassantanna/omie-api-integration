@@ -2,11 +2,13 @@ namespace omie_poc.OrdemServico
 {
     public class OrdemDeServicoResponse
     {
-        public dynamic Message { get; private set; }
+        public string cCodIntOs { get; set; }
+        public double nCodOS { get; set; }
 
-        public OrdemDeServicoResponse(dynamic message)
-        {
-            Message = message;
-        }
+        public string cNumOS { get; set; }
+
+        public string cCodStatus { get; set; }
+
+        public string cDescStatus { get; set; }
     }
 }

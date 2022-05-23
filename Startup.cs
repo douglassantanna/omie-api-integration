@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using omie_api_integration.OrdemServico.Incluir;
+using omie_api_integration.OrdemServico.Listar;
 using omie_poc.Conta;
 using omie_poc.OrdemServico.Incluir;
 
@@ -24,6 +25,10 @@ namespace omie_poc
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddHttpClient<IOrdemDeServico, OrdensDeServico>((x) =>
+            {
+                x.BaseAddress = new Uri("https://app.omie.com.br/api/v1/servicos/os/");
+            });
+            services.AddHttpClient<IListarOS, ListarOSs>((x) =>
             {
                 x.BaseAddress = new Uri("https://app.omie.com.br/api/v1/servicos/os/");
             });

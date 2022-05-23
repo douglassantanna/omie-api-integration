@@ -1,16 +1,18 @@
 using System.Collections.Generic;
+using omie_poc.Conta;
 using omie_poc.OrdemServico.Domain;
 
-namespace omie_poc.OrdemServico.Incluir
+namespace omie_api_integration.OrdemServico.Listar
 {
-    public class OrdemDeServicoRequest
+    public class ListarOSResponse
     {
-        public string call { get; set; }
-        public string app_key { get; set; }
-        public string app_secret { get; set; }
-        public List<IncluirOSParam> param { get; set; }
+        public int pagina { get; set; }
+        public string total_de_paginas { get; set; }
+        public string registros { get; set; }
+        public string total_de_registros { get; set; }
+        public List<OsCadastro> osCadastro { get; set; }
     }
-    public class IncluirOSParam
+    public class OsCadastro
     {
         public Cabecalho Cabecalho { get; set; }
         public Email Email { get; set; }

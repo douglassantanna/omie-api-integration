@@ -1,4 +1,4 @@
-namespace omie_poc.OrdemServico
+namespace omie_poc.OrdemServico.Domain
 {
     public class Email
     {

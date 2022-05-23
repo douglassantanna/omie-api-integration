@@ -1,10 +1,10 @@
-namespace omie_poc.OrdemServico
+namespace omie_poc.OrdemServico.Domain
 {
-    public class InformacoesAdicionais
+    public class InformacaoAdicional
     {
         public string cCidPrestServ { get; set; }
         public string cCodCateg { get; set; }
         public string cDadosAdicNF { get; set; }
-        public int nCodCC { get; set; }
+        public double nCodCC { get; set; }
     }
 }

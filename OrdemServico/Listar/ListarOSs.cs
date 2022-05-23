@@ -1,28 +1,31 @@
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Flurl.Http;
-using Microsoft.Extensions.Logging;
-using omie_api_integration.OrdemServico.Incluir;
 using omie_api_integration.Shared;
 
-namespace omie_poc.OrdemServico.Incluir
+namespace omie_api_integration.OrdemServico.Listar
 {
-    public class OrdensDeServico : IOrdemDeServico
+    public interface IListarOS
+    {
+        public Task<NotificationResult> ListarOS(ListarOSRequest request);
+    }
+    public class ListarOSs : IListarOS
     {
         private readonly HttpClient _httpClient;
 
-        public OrdensDeServico(HttpClient httpClient)
+        public ListarOSs(HttpClient httpClient)
         {
             _httpClient = httpClient;
         }
-        public async Task<NotificationResult> IncluirOS(OrdemDeServicoRequest request)
+        public async Task<NotificationResult> ListarOS(ListarOSRequest request)
         {
             var response = await _httpClient.BaseAddress
-            .WithHeader("Content-type", "application/json")
-            .WithHeader("accept", "application/json")
-            .AllowAnyHttpStatus()
-            .SendJsonAsync(HttpMethod.Post, request);
+             .WithHeader("Content-type", "application/json")
+             .WithHeader("accept", "application/json")
+             .AllowAnyHttpStatus()
+             .SendJsonAsync(HttpMethod.Post, request);
 
             if (response.StatusCode > 300)
             {

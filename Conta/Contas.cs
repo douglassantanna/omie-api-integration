@@ -25,12 +25,12 @@ namespace omie_poc.Conta
 
             if (response.StatusCode != 200)
             {
-                return new NotificationResult().Failure().AddMessage($"{responseString}");
+                return new NotificationResult().Failure().AddNotification($"{responseString}");
             }
             else
             {
                 var conta = JsonSerializer.Deserialize<ContaResponse>(responseString);
-                return new NotificationResult().Ok().ShowObject(conta);
+                return new NotificationResult().Ok().ShowResult(conta);
             }
         }
     }
