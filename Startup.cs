@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using omie_api_integration.OrdemServico.Faturar;
 using omie_api_integration.OrdemServico.Incluir;
 using omie_api_integration.OrdemServico.Listar;
 using omie_poc.Conta;
@@ -35,6 +36,10 @@ namespace omie_poc
             services.AddHttpClient<IContas, Contas>((x) =>
             {
                 x.BaseAddress = new Uri("https://app.omie.com.br/api/v1/crm/contas/");
+            });
+            services.AddHttpClient<IFaturarOS, FaturarOSs>((x) =>
+            {
+                x.BaseAddress = new Uri("https://app.omie.com.br/api/v1/servicos/osp/");
             });
             services.AddControllers();
             services.AddSwaggerGen(c =>
