@@ -5,12 +5,14 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using omie_api_integration.OrdemServico.Faturar;
-using omie_api_integration.OrdemServico.Incluir;
-using omie_api_integration.OrdemServico.Listar;
-using omie_api_integration.Prefeitura;
-using omie_poc.Conta;
-using omie_poc.OrdemServico.Incluir;
+using omie_api_integration.ColetasOnline.CTR.SolicitarCtr;
+using omie_api_integration.ColetasOnline.EnviarCacambaLocal;
+using omie_api_integration.ColetasOnline.Prefeitura;
+using omie_api_integration.ColetasOnline.RetirarCacamba;
+using omie_api_integration.Omie.OrdemServico.Faturar;
+using omie_api_integration.Omie.OrdemServico.Listar;
+using omie_poc.Omie.Conta;
+using omie_poc.Omie.OrdemServico.Incluir;
 
 namespace omie_poc
 {
@@ -20,7 +22,6 @@ namespace omie_poc
         {
             Configuration = configuration;
         }
-
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -43,6 +44,9 @@ namespace omie_poc
                 x.BaseAddress = new Uri("https://app.omie.com.br/api/v1/servicos/osp/");
             });
             services.AddScoped<IListarPrefeitura, ListarPrefeituras>();
+            services.AddScoped<ISolicitarCTR, SolicitarCTRs>();
+            services.AddScoped<IEnviarCacambaLocal, EnviarCacambasLocal>();
+            services.AddScoped<IRetirarCacamba, RetirarCacambas>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

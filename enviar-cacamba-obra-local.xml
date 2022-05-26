@@ -1,0 +1,15 @@
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <EnviaCacambaObra_Local xmlns="http://tempuri.org/">
+            <iCodCidade>25</iCodCidade>
+            <stLoginUser>04941418000154</stLoginUser>
+            <stSenhaUser>Cacambex13</stSenhaUser>
+            <stNumero_CTR>1</stNumero_CTR>
+            <stDataEnvio>1</stDataEnvio>
+            <stIDentificacaoCacamba></stIDentificacaoCacamba>
+            <stLocalEstacionamento></stLocalEstacionamento>
+        </EnviaCacambaObra_Local>
+    </soap:Body>
+</soap:Envelope>

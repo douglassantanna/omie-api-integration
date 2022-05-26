@@ -1,0 +1,31 @@
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <SolicitaCTR xmlns="http://tempuri.org/">
+            <iCodCidade>25</iCodCidade>
+            <stLoginUser>04941418000154</stLoginUser>
+            <stSenhaUser>Cacambex13</stSenhaUser>
+            <iTipoVeiculo>1</iTipoVeiculo>
+            <iClassificacao>1</iClassificacao>
+            <iClasse></iClasse>
+            <iVolume></iVolume>
+            <iGGTipo>1</iGGTipo>
+            <GG_CPF></GG_CPF>
+            <GG_Nome></GG_Nome>
+            <GG_Email></GG_Email>
+            <GG_Endereco_CEP></GG_Endereco_CEP>
+            <GG_Endereco_Rua></GG_Endereco_Rua>
+            <GG_Endereco_Num></GG_Endereco_Num>
+            <GG_Endereco_Compl></GG_Endereco_Compl>
+            <GG_Endereco_Bairro></GG_Endereco_Bairro>
+            <GG_Endereco_Cidade></GG_Endereco_Cidade>
+            <CTR_CEP></CTR_CEP>
+            <CTR_Rua></CTR_Rua>
+            <CTR_Num></CTR_Num>
+            <CTR_Compl></CTR_Compl>
+            <CTR_Bairro></CTR_Bairro>
+            <CTR_Cidade></CTR_Cidade>
+        </SolicitaCTR>
+    </soap:Body>
+</soap:Envelope>
