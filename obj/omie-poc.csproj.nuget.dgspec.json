@@ -44,13 +44,13 @@
               "target": "Package",
               "version": "[2.0.4, )"
             },
-            "Flurl": {
-              "target": "Package",
-              "version": "[3.0.5, )"
-            },
             "Flurl.Http": {
               "target": "Package",
-              "version": "[3.2.3, )"
+              "version": "[3.2.4, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[107.3.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

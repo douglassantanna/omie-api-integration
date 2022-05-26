@@ -14,7 +14,7 @@
           "lib/netstandard1.3/FluentValidator.dll": {}
         }
       },
-      "Flurl/3.0.5": {
+      "Flurl/3.0.6": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Flurl.dll": {}
@@ -23,10 +23,10 @@
           "lib/netstandard2.0/Flurl.dll": {}
         }
       },
-      "Flurl.Http/3.2.3": {
+      "Flurl.Http/3.2.4": {
         "type": "package",
         "dependencies": {
-          "Flurl": "3.0.5",
+          "Flurl": "3.0.6",
           "Newtonsoft.Json": "12.0.2",
           "System.Text.Encoding.CodePages": "4.5.1"
         },
@@ -231,6 +231,18 @@
         },
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "RestSharp/107.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Text.Json": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/RestSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/RestSharp.dll": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -1520,6 +1532,15 @@
           "ref/netstandard1.3/System.Text.Encoding.Extensions.dll": {}
         }
       },
+      "System.Text.Json/5.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/System.Text.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/System.Text.Json.dll": {}
+        }
+      },
       "System.Text.RegularExpressions/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1684,45 +1705,39 @@
         "lib/netstandard1.3/FluentValidator.dll"
       ]
     },
-    "Flurl/3.0.5": {
-      "sha512": "CSROVbrfaHtqw1B7pvJfKvEgKOkx3fZj16a8fhKSWTJ/bwOT1EWnx6hcc+XzPVFNDR0d+XTa4bE7bIUhXHn1WQ==",
+    "Flurl/3.0.6": {
+      "sha512": "XMIlB/tJ4nTYF2+79xDsnnlgbXHpKyizKX2fffrECekI6pEsa9MSLzf5tPVMdLy4k4AcJPLs356Sa2Le5VRDCw==",
       "type": "package",
-      "path": "flurl/3.0.5",
+      "path": "flurl/3.0.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "flurl.3.0.5.nupkg.sha512",
+        "flurl.3.0.6.nupkg.sha512",
         "flurl.nuspec",
         "icon.png",
         "lib/net461/Flurl.dll",
-        "lib/net461/Flurl.pdb",
         "lib/net461/Flurl.xml",
         "lib/net472/Flurl.dll",
-        "lib/net472/Flurl.pdb",
         "lib/net472/Flurl.xml",
         "lib/netstandard2.0/Flurl.dll",
-        "lib/netstandard2.0/Flurl.pdb",
         "lib/netstandard2.0/Flurl.xml"
       ]
     },
-    "Flurl.Http/3.2.3": {
-      "sha512": "kwELhfTA4ivyD/tHVxyypeQOc76ISJEAHcx1gfN3QqUFaqxHjOOewurra7vBEUraMOneJsptxmfTHHO8LD2s0g==",
+    "Flurl.Http/3.2.4": {
+      "sha512": "Me9Vm4Lm21vt/pbR0G2Dww/ZOjJgh6mB2FiH28aiUYStJD10ZecDp8jxg2zKxcy6lnkvLm99pjG4yC/k7a/d8w==",
       "type": "package",
-      "path": "flurl.http/3.2.3",
+      "path": "flurl.http/3.2.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "flurl.http.3.2.3.nupkg.sha512",
+        "flurl.http.3.2.4.nupkg.sha512",
         "flurl.http.nuspec",
         "icon.png",
         "lib/net461/Flurl.Http.dll",
-        "lib/net461/Flurl.Http.pdb",
         "lib/net461/Flurl.Http.xml",
         "lib/net472/Flurl.Http.dll",
-        "lib/net472/Flurl.Http.pdb",
         "lib/net472/Flurl.Http.xml",
         "lib/netstandard2.0/Flurl.Http.dll",
-        "lib/netstandard2.0/Flurl.Http.pdb",
         "lib/netstandard2.0/Flurl.Http.xml"
       ]
     },
@@ -2059,6 +2074,24 @@
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "newtonsoft.json.12.0.2.nupkg.sha512",
         "newtonsoft.json.nuspec"
+      ]
+    },
+    "RestSharp/107.3.0": {
+      "sha512": "qu+A+VAnVLX3OeWVNm11UJz0aVErqSfYqIiOUbJM9x98uLymCOoL/oXRAjMb6XHra27WXxHmzy9EKEOKXWR6Pw==",
+      "type": "package",
+      "path": "restsharp/107.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net5.0/RestSharp.dll",
+        "lib/net5.0/RestSharp.xml",
+        "lib/net6.0/RestSharp.dll",
+        "lib/net6.0/RestSharp.xml",
+        "lib/netstandard2.0/RestSharp.dll",
+        "lib/netstandard2.0/RestSharp.xml",
+        "restsharp.107.3.0.nupkg.sha512",
+        "restsharp.nuspec",
+        "restsharp.png"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -5595,6 +5628,28 @@
         "system.text.encoding.extensions.nuspec"
       ]
     },
+    "System.Text.Json/5.0.0": {
+      "sha512": "+luxMQNZ2WqeffBU7Ml6njIvxc8169NW2oU+ygNudXQGZiarjE7DOtN7bILiQjTZjkmwwRZGTtLzmdrSI/Ustw==",
+      "type": "package",
+      "path": "system.text.json/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Text.Json.dll",
+        "lib/net461/System.Text.Json.xml",
+        "lib/netcoreapp3.0/System.Text.Json.dll",
+        "lib/netcoreapp3.0/System.Text.Json.xml",
+        "lib/netstandard2.0/System.Text.Json.dll",
+        "lib/netstandard2.0/System.Text.Json.xml",
+        "system.text.json.5.0.0.nupkg.sha512",
+        "system.text.json.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Text.RegularExpressions/4.3.0": {
       "sha512": "RpT2DA+L660cBt1FssIE9CAGpLFdFPuheB7pLpKpn6ZXNby7jDERe8Ua/Ne2xGiwLVG2JOqziiaVCGDon5sKFA==",
       "type": "package",
@@ -6096,8 +6151,8 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "FluentValidator >= 2.0.4",
-      "Flurl >= 3.0.5",
-      "Flurl.Http >= 3.2.3",
+      "Flurl.Http >= 3.2.4",
+      "RestSharp >= 107.3.0",
       "Swashbuckle.AspNetCore >= 5.6.3",
       "System.ServiceModel.Duplex >= 4.8.*",
       "System.ServiceModel.Federation >= 4.8.*",
@@ -6149,13 +6204,13 @@
             "target": "Package",
             "version": "[2.0.4, )"
           },
-          "Flurl": {
-            "target": "Package",
-            "version": "[3.0.5, )"
-          },
           "Flurl.Http": {
             "target": "Package",
-            "version": "[3.2.3, )"
+            "version": "[3.2.4, )"
+          },
+          "RestSharp": {
+            "target": "Package",
+            "version": "[107.3.0, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

@@ -88,3 +88,4 @@ C:\Clouddata\POCS\omie-api-integration\obj\Debug\net5.0\omie-poc.pdb
 C:\Clouddata\POCS\omie-api-integration\obj\Debug\net5.0\omie-poc.genruntimeconfig.cache
 C:\Clouddata\POCS\omie-api-integration\obj\Debug\net5.0\ref\omie-poc.dll
 C:\Clouddata\POCS\omie-api-integration\bin\Debug\net5.0\FluentValidator.dll
+C:\Clouddata\POCS\omie-api-integration\bin\Debug\net5.0\RestSharp.dll

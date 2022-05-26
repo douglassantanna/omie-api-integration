@@ -8,6 +8,7 @@ using Microsoft.OpenApi.Models;
 using omie_api_integration.OrdemServico.Faturar;
 using omie_api_integration.OrdemServico.Incluir;
 using omie_api_integration.OrdemServico.Listar;
+using omie_api_integration.Prefeitura;
 using omie_poc.Conta;
 using omie_poc.OrdemServico.Incluir;
 
@@ -41,6 +42,7 @@ namespace omie_poc
             {
                 x.BaseAddress = new Uri("https://app.omie.com.br/api/v1/servicos/osp/");
             });
+            services.AddScoped<IListarPrefeitura, ListarPrefeituras>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

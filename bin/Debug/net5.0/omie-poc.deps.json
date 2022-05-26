@@ -34,8 +34,8 @@
       "omie-poc/1.0.0": {
         "dependencies": {
           "FluentValidator": "2.0.4",
-          "Flurl": "3.0.5",
-          "Flurl.Http": "3.2.3",
+          "Flurl.Http": "3.2.4",
+          "RestSharp": "107.3.0",
           "Swashbuckle.AspNetCore": "5.6.3",
           "System.ServiceModel.Duplex": "4.8.1",
           "System.ServiceModel.Federation": "4.8.1",
@@ -296,7 +296,7 @@
           "System.Text.Encoding.Reference": "5.0.0.0",
           "System.Text.Encoding.Extensions.Reference": "5.0.0.0",
           "System.Text.Encodings.Web": "5.0.0.0",
-          "System.Text.Json": "5.0.0.0",
+          "System.Text.Json.Reference": "5.0.0.0",
           "System.Text.RegularExpressions.Reference": "5.0.0.0",
           "System.Threading.Channels": "5.0.0.0",
           "System.Threading.Reference": "5.0.0.0",
@@ -347,27 +347,27 @@
           "lib/netstandard1.3/FluentValidator.dll": {}
         }
       },
-      "Flurl/3.0.5": {
+      "Flurl/3.0.6": {
         "runtime": {
           "lib/netstandard2.0/Flurl.dll": {
-            "assemblyVersion": "3.0.5.0",
-            "fileVersion": "3.0.5.0"
+            "assemblyVersion": "3.0.6.0",
+            "fileVersion": "3.0.6.0"
           }
         },
         "compile": {
           "lib/netstandard2.0/Flurl.dll": {}
         }
       },
-      "Flurl.Http/3.2.3": {
+      "Flurl.Http/3.2.4": {
         "dependencies": {
-          "Flurl": "3.0.5",
+          "Flurl": "3.0.6",
           "Newtonsoft.Json": "12.0.2",
           "System.Text.Encoding.CodePages": "4.5.1"
         },
         "runtime": {
           "lib/netstandard2.0/Flurl.Http.dll": {
-            "assemblyVersion": "3.2.3.0",
-            "fileVersion": "3.2.3.0"
+            "assemblyVersion": "3.2.4.0",
+            "fileVersion": "3.2.4.0"
           }
         },
         "compile": {
@@ -530,6 +530,20 @@
         },
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "RestSharp/107.3.0": {
+        "dependencies": {
+          "System.Text.Json": "5.0.0"
+        },
+        "runtime": {
+          "lib/net5.0/RestSharp.dll": {
+            "assemblyVersion": "107.3.0.0",
+            "fileVersion": "107.3.0.0"
+          }
+        },
+        "compile": {
+          "lib/net5.0/RestSharp.dll": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
@@ -1256,6 +1270,7 @@
           "System.Text.Encoding": "4.3.0"
         }
       },
+      "System.Text.Json/5.0.0": {},
       "System.Text.RegularExpressions/4.3.0": {
         "dependencies": {
           "System.Runtime": "4.3.0"
@@ -2866,7 +2881,7 @@
         },
         "compileOnly": true
       },
-      "System.Text.Json/5.0.0.0": {
+      "System.Text.Json.Reference/5.0.0.0": {
         "compile": {
           "System.Text.Json.dll": {}
         },
@@ -3055,19 +3070,19 @@
       "path": "fluentvalidator/2.0.4",
       "hashPath": "fluentvalidator.2.0.4.nupkg.sha512"
     },
-    "Flurl/3.0.5": {
+    "Flurl/3.0.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-CSROVbrfaHtqw1B7pvJfKvEgKOkx3fZj16a8fhKSWTJ/bwOT1EWnx6hcc+XzPVFNDR0d+XTa4bE7bIUhXHn1WQ==",
-      "path": "flurl/3.0.5",
-      "hashPath": "flurl.3.0.5.nupkg.sha512"
+      "sha512": "sha512-XMIlB/tJ4nTYF2+79xDsnnlgbXHpKyizKX2fffrECekI6pEsa9MSLzf5tPVMdLy4k4AcJPLs356Sa2Le5VRDCw==",
+      "path": "flurl/3.0.6",
+      "hashPath": "flurl.3.0.6.nupkg.sha512"
     },
-    "Flurl.Http/3.2.3": {
+    "Flurl.Http/3.2.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-kwELhfTA4ivyD/tHVxyypeQOc76ISJEAHcx1gfN3QqUFaqxHjOOewurra7vBEUraMOneJsptxmfTHHO8LD2s0g==",
-      "path": "flurl.http/3.2.3",
-      "hashPath": "flurl.http.3.2.3.nupkg.sha512"
+      "sha512": "sha512-Me9Vm4Lm21vt/pbR0G2Dww/ZOjJgh6mB2FiH28aiUYStJD10ZecDp8jxg2zKxcy6lnkvLm99pjG4yC/k7a/d8w==",
+      "path": "flurl.http/3.2.4",
+      "hashPath": "flurl.http.3.2.4.nupkg.sha512"
     },
     "Microsoft.CSharp/4.5.0": {
       "type": "package",
@@ -3166,6 +3181,13 @@
       "sha512": "sha512-rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
       "path": "newtonsoft.json/12.0.2",
       "hashPath": "newtonsoft.json.12.0.2.nupkg.sha512"
+    },
+    "RestSharp/107.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qu+A+VAnVLX3OeWVNm11UJz0aVErqSfYqIiOUbJM9x98uLymCOoL/oXRAjMb6XHra27WXxHmzy9EKEOKXWR6Pw==",
+      "path": "restsharp/107.3.0",
+      "hashPath": "restsharp.107.3.0.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
@@ -3747,6 +3769,13 @@
       "sha512": "sha512-YVMK0Bt/A43RmwizJoZ22ei2nmrhobgeiYwFzC4YAN+nue8RF6djXDMog0UCn+brerQoYVyaS+ghy9P/MUVcmw==",
       "path": "system.text.encoding.extensions/4.3.0",
       "hashPath": "system.text.encoding.extensions.4.3.0.nupkg.sha512"
+    },
+    "System.Text.Json/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+luxMQNZ2WqeffBU7Ml6njIvxc8169NW2oU+ygNudXQGZiarjE7DOtN7bILiQjTZjkmwwRZGTtLzmdrSI/Ustw==",
+      "path": "system.text.json/5.0.0",
+      "hashPath": "system.text.json.5.0.0.nupkg.sha512"
     },
     "System.Text.RegularExpressions/4.3.0": {
       "type": "package",
@@ -5081,7 +5110,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Text.Json/5.0.0.0": {
+    "System.Text.Json.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
