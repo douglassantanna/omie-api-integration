@@ -11,6 +11,7 @@ using omie_api_integration.ColetasOnline.Prefeitura;
 using omie_api_integration.ColetasOnline.RetirarCacamba;
 using omie_api_integration.Omie.OrdemServico.Faturar;
 using omie_api_integration.Omie.OrdemServico.Listar;
+using omie_api_integration.Omie.OrdemServico.Validar;
 using omie_poc.Omie.Conta;
 using omie_poc.Omie.OrdemServico.Incluir;
 
@@ -43,10 +44,15 @@ namespace omie_poc
             {
                 x.BaseAddress = new Uri("https://app.omie.com.br/api/v1/servicos/osp/");
             });
+            services.AddHttpClient<IValidarOS, ValidarOSs>((x) =>
+            {
+                x.BaseAddress = new Uri("https://app.omie.com.br/api/v1/servicos/osp/");
+            });
             services.AddScoped<IListarPrefeitura, ListarPrefeituras>();
             services.AddScoped<ISolicitarCTR, SolicitarCTRs>();
             services.AddScoped<IEnviarCacambaLocal, EnviarCacambasLocal>();
             services.AddScoped<IRetirarCacamba, RetirarCacambas>();
+            // services.AddScoped<IValidarOS, ValidarOSs>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

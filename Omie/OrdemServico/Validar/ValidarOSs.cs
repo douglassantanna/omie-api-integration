@@ -5,27 +5,28 @@ using Flurl.Http;
 using Newtonsoft.Json;
 using omie_api_integration.Shared;
 
-namespace omie_api_integration.Omie.OrdemServico.Listar
+namespace omie_api_integration.Omie.OrdemServico.Validar
 {
-    public interface IListarOS
+    public interface IValidarOS
     {
-        public Task<NotificationResult> ListarOS(ListarOSRequest request);
+        public Task<NotificationResult> ValidarOS(ValidarOSRequest request);
     }
-    public class ListarOSs : IListarOS
+    public class ValidarOSs : IValidarOS
     {
         private readonly HttpClient _httpClient;
 
-        public ListarOSs(HttpClient httpClient)
+        public ValidarOSs(HttpClient httpClient)
         {
             _httpClient = httpClient;
         }
-        public async Task<NotificationResult> ListarOS(ListarOSRequest request)
+
+        public async Task<NotificationResult> ValidarOS(ValidarOSRequest request)
         {
             var response = await _httpClient.BaseAddress
-             .WithHeader("Content-type", "application/json")
-             .WithHeader("accept", "application/json")
-             .AllowAnyHttpStatus()
-             .SendJsonAsync(HttpMethod.Post, request);
+              .WithHeader("Content-type", "application/json")
+              .WithHeader("accept", "application/json")
+              .AllowAnyHttpStatus()
+              .SendJsonAsync(HttpMethod.Post, request);
 
             if (response.StatusCode > 300)
             {
@@ -33,8 +34,9 @@ namespace omie_api_integration.Omie.OrdemServico.Listar
                 return new NotificationResult().Failure().AddNotification($"{error.Notifications}");
             }
             var responseString = await response.GetStringAsync();
-            var responseDeserialized = JsonConvert.DeserializeObject<ListarOSResponse>(responseString);
+            var responseDeserialized = JsonConvert.DeserializeObject<ValidarOSResponse>(responseString);
             return new NotificationResult().Ok().ShowResult(responseDeserialized);
         }
+
     }
 }
