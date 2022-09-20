@@ -4,6 +4,8 @@ using System.Threading.Tasks;
 using Flurl.Http;
 using Newtonsoft.Json;
 using omie_api_integration.Shared;
+using omie_poc.Omie.Conta;
+using omie_poc.Omie.Servico;
 
 namespace omie_api_integration.Omie.OrdemServico.Validar
 {
@@ -30,8 +32,8 @@ namespace omie_api_integration.Omie.OrdemServico.Validar
 
             if (response.StatusCode > 300)
             {
-                var error = await response.GetJsonAsync<NotificationResult>();
-                return new NotificationResult().Failure().AddNotification($"{error.Notifications}");
+                var error = await response.GetJsonAsync<OmieErrorResult>();
+                return new NotificationResult().Failure().ShowMessage($"{error}");
             }
             var responseString = await response.GetStringAsync();
             var responseDeserialized = JsonConvert.DeserializeObject<ValidarOSResponse>(responseString);

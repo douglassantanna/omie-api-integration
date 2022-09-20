@@ -3,6 +3,8 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using Flurl.Http;
 using omie_api_integration.Shared;
+using omie_poc.Omie.Conta;
+using omie_poc.Omie.Servico;
 
 namespace omie_api_integration.Omie.OrdemServico.Faturar
 {
@@ -29,8 +31,8 @@ namespace omie_api_integration.Omie.OrdemServico.Faturar
 
             if (response.StatusCode > 300)
             {
-                var error = await response.GetJsonAsync<NotificationResult>();
-                return new NotificationResult().Failure().AddNotification($"{error.Notifications}");
+                var error = await response.GetJsonAsync<OmieErrorResult>();
+                return new NotificationResult().Failure().ShowMessage($"{error}");
             }
             var responseString = await response.GetStringAsync();
             // var fatura = JsonSerializer.Deserialize<FaturarOSResponse>(responseString, new JsonSerializerOptions() { WriteIndented = true });

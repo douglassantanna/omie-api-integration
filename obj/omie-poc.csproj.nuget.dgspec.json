@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Clouddata\\POCS\\omie-api-integration\\omie-poc.csproj": {}
+    "C:\\dev\\omie-api-integration\\omie-poc.csproj": {}
   },
   "projects": {
-    "C:\\Clouddata\\POCS\\omie-api-integration\\omie-poc.csproj": {
+    "C:\\dev\\omie-api-integration\\omie-poc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Clouddata\\POCS\\omie-api-integration\\omie-poc.csproj",
+        "projectUniqueName": "C:\\dev\\omie-api-integration\\omie-poc.csproj",
         "projectName": "omie-poc",
-        "projectPath": "C:\\Clouddata\\POCS\\omie-api-integration\\omie-poc.csproj",
+        "projectPath": "C:\\dev\\omie-api-integration\\omie-poc.csproj",
         "packagesPath": "C:\\Users\\DouglasCraici\\.nuget\\packages\\",
-        "outputPath": "C:\\Clouddata\\POCS\\omie-api-integration\\obj\\",
+        "outputPath": "C:\\dev\\omie-api-integration\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DouglasCraici\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -48,6 +48,10 @@
               "target": "Package",
               "version": "[3.2.4, )"
             },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            },
             "RestSharp": {
               "target": "Package",
               "version": "[107.3.0, )"
@@ -83,7 +87,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -95,7 +100,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

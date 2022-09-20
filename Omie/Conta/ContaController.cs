@@ -1,6 +1,8 @@
 using System.Threading.Tasks;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using omie_poc.Omie.Servico;
 
 namespace omie_poc.Omie.Conta
 {
@@ -9,9 +11,11 @@ namespace omie_poc.Omie.Conta
     public class ContaController : ControllerBase
     {
         private readonly IContas _contas;
-        public ContaController(IContas contas)
+        private readonly IMediator _mediator;
+        public ContaController(IContas contas, IMediator mediator)
         {
             _contas = contas;
+            _mediator = mediator;
         }
 
         [HttpPost("consultar-contas")]
@@ -19,6 +23,14 @@ namespace omie_poc.Omie.Conta
         {
             var response = await _contas.GetContas(contaRequest);
             return Ok(response);
+        }
+        [HttpPost("criar-servico")]
+        public async Task<ActionResult> Criar(NovaServicoComando comando)
+        {
+            var result = await _mediator.Send(comando);
+            if (!result.Success)
+                return BadRequest(result);
+            return Created("", result);
         }
     }
 }

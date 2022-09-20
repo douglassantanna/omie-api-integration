@@ -1,4 +1,5 @@
 using System;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -14,6 +15,7 @@ using omie_api_integration.Omie.OrdemServico.Listar;
 using omie_api_integration.Omie.OrdemServico.Validar;
 using omie_poc.Omie.Conta;
 using omie_poc.Omie.OrdemServico.Incluir;
+using omie_poc.Omie.Servico;
 
 namespace omie_poc
 {
@@ -28,6 +30,7 @@ namespace omie_poc
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMediatR(typeof(Startup));
             services.AddHttpClient<IOrdemDeServico, OrdensDeServico>((x) =>
             {
                 x.BaseAddress = new Uri("https://app.omie.com.br/api/v1/servicos/os/");
@@ -48,6 +51,7 @@ namespace omie_poc
             {
                 x.BaseAddress = new Uri("https://app.omie.com.br/api/v1/servicos/osp/");
             });
+            services.AddScoped<IServicos, Servicos>();
             services.AddScoped<IListarPrefeitura, ListarPrefeituras>();
             services.AddScoped<ISolicitarCTR, SolicitarCTRs>();
             services.AddScoped<IEnviarCacambaLocal, EnviarCacambasLocal>();

@@ -25,7 +25,7 @@ namespace omie_poc.Omie.Conta
 
             if (response.StatusCode != 200)
             {
-                return new NotificationResult().Failure().AddNotification($"{responseString}");
+                return new NotificationResult().Failure().ShowMessage(responseString);
             }
             else
             {

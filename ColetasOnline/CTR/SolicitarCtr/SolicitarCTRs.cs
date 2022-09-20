@@ -23,7 +23,7 @@ namespace omie_api_integration.ColetasOnline.CTR.SolicitarCtr
             }
             catch (System.Exception ex)
             {
-                return new NotificationResult().Failure().AddNotification($"{ex.Message}");
+                return new NotificationResult().Failure().ShowMessage($"{ex.Message}");
             }
         }
         private async Task<string> RequestSoap(string request)

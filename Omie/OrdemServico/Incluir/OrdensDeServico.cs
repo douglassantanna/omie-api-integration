@@ -3,6 +3,8 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using Flurl.Http;
 using omie_api_integration.Shared;
+using omie_poc.Omie.Conta;
+using omie_poc.Omie.Servico;
 
 namespace omie_poc.Omie.OrdemServico.Incluir
 {
@@ -24,8 +26,8 @@ namespace omie_poc.Omie.OrdemServico.Incluir
 
             if (response.StatusCode > 300)
             {
-                var error = await response.GetJsonAsync<NotificationResult>();
-                return new NotificationResult().Failure().AddNotification($"{error.Notifications}");
+                var error = await response.GetJsonAsync<OmieErrorResult>();
+                return new NotificationResult().Failure().ShowMessage($"{error}");
             }
             var responseString = await response.GetStringAsync();
             return new NotificationResult().Ok().ShowResult(responseString, new JsonSerializerOptions() { WriteIndented = true });
