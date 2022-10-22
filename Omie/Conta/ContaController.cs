@@ -1,8 +1,6 @@
 using System.Threading.Tasks;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using omie_poc.Omie.Servico;
 
 namespace omie_poc.Omie.Conta
 {
@@ -23,14 +21,6 @@ namespace omie_poc.Omie.Conta
         {
             var response = await _contas.GetContas(contaRequest);
             return Ok(response);
-        }
-        [HttpPost("criar-servico")]
-        public async Task<ActionResult> Criar(NovaServicoComando comando)
-        {
-            var result = await _mediator.Send(comando);
-            if (!result.Success)
-                return BadRequest(result);
-            return Created("", result);
         }
     }
 }

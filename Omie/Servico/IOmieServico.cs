@@ -4,8 +4,8 @@ using omie_poc.Omie.Compartilhado;
 
 namespace omie_poc.Omie.Servico
 {
-    public interface IServicos
+    public interface IOmieServico
     {
-        Task<NotificationResult> CriarServico(OmieRequest request);
+        Task<Result> CriarServico(OmieRequest request);
     }
 }

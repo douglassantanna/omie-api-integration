@@ -16,11 +16,12 @@ namespace omie_poc.Omie.OrdemServico.Controllers
         private readonly IFaturarOS _faturar;
         private readonly IValidarOS _validar;
 
-        public OrdemDeServicoController(IOrdemDeServico ordemDeServico, IListarOS listar, IFaturarOS faturar)
+        public OrdemDeServicoController(IOrdemDeServico ordemDeServico, IListarOS listar, IFaturarOS faturar, IValidarOS validar)
         {
             _ordem = ordemDeServico;
             _listar = listar;
             _faturar = faturar;
+            _validar = validar;
         }
         [HttpPost("incluir-os")]
         public async Task<IActionResult> IncluirOS(OrdemDeServicoRequest request)

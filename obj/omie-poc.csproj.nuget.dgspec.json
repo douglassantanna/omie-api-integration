@@ -1,32 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\dev\\omie-api-integration\\omie-poc.csproj": {}
+    "C:\\pp\\omie-api-integration\\omie-poc.csproj": {}
   },
   "projects": {
-    "C:\\dev\\omie-api-integration\\omie-poc.csproj": {
+    "C:\\pp\\omie-api-integration\\omie-poc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dev\\omie-api-integration\\omie-poc.csproj",
+        "projectUniqueName": "C:\\pp\\omie-api-integration\\omie-poc.csproj",
         "projectName": "omie-poc",
-        "projectPath": "C:\\dev\\omie-api-integration\\omie-poc.csproj",
-        "packagesPath": "C:\\Users\\DouglasCraici\\.nuget\\packages\\",
-        "outputPath": "C:\\dev\\omie-api-integration\\obj\\",
+        "projectPath": "C:\\pp\\omie-api-integration\\omie-poc.csproj",
+        "packagesPath": "C:\\Users\\santa\\.nuget\\packages\\",
+        "outputPath": "C:\\pp\\omie-api-integration\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\DouglasCraici\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\santa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -37,8 +37,8 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "FluentValidator": {
               "target": "Package",
@@ -58,7 +58,7 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[5.6.3, )"
+              "version": "[6.0.0, )"
             },
             "System.ServiceModel.Duplex": {
               "target": "Package",
@@ -100,7 +100,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

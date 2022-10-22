@@ -51,7 +51,7 @@ namespace omie_poc
             {
                 x.BaseAddress = new Uri("https://app.omie.com.br/api/v1/servicos/osp/");
             });
-            services.AddScoped<IServicos, Servicos>();
+            services.AddScoped<IOmieServico, Servicos>();
             services.AddScoped<IListarPrefeitura, ListarPrefeituras>();
             services.AddScoped<ISolicitarCTR, SolicitarCTRs>();
             services.AddScoped<IEnviarCacambaLocal, EnviarCacambasLocal>();

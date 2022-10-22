@@ -7,7 +7,7 @@ using omie_poc.Omie.Compartilhado;
 
 namespace omie_poc.Omie.Servico
 {
-    public class Servicos : IServicos
+    public class Servicos : IOmieServico
     {
         private readonly HttpClient _http;
 
@@ -16,7 +16,7 @@ namespace omie_poc.Omie.Servico
             _http = http;
         }
 
-        public async Task<NotificationResult> CriarServico(OmieRequest request)
+        public async Task<Result> CriarServico(OmieRequest request)
         {
             try
             {
@@ -27,12 +27,12 @@ namespace omie_poc.Omie.Servico
                  .PostJsonAsync(request)
                  .ReceiveJson<OmieCriarServicoResult>();
 
-                return new NotificationResult().Ok().ShowServicoResult(httpResult);
+                return new Result("", true, httpResult); ;
             }
             catch (FlurlHttpException ex)
             {
                 var errors = await ex.GetResponseJsonAsync<OmieErrorResult>();
-                return new NotificationResult().Failure().ShowResult(errors);
+                return new Result("Request não pode ser nulo", false, errors);
                 // return new("Ocorreu um erro na requisicao. Tente novamente.", new OmieCriarCacambaResult(errors), false);
 
             }
