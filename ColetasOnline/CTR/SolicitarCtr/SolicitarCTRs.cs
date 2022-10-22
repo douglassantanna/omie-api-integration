@@ -13,17 +13,17 @@ namespace omie_api_integration.ColetasOnline.CTR.SolicitarCtr
         {
             _httpClient = httpClient;
         }
-        public async Task<NotificationResult> SolicitaCTR()
+        public async Task<Result> SolicitaCTR()
         {
             try
             {
                 var body = File.ReadAllText("solicitar-ctr.xml");
                 var request = await RequestSoap(body);
-                return new NotificationResult().Ok().ShowResult(request);
+                return new("", true, request);
             }
             catch (System.Exception ex)
             {
-                return new NotificationResult().Failure().ShowMessage($"{ex.Message}");
+                throw;
             }
         }
         private async Task<string> RequestSoap(string request)

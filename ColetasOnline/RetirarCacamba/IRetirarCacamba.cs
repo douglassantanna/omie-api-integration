@@ -5,6 +5,6 @@ namespace omie_api_integration.ColetasOnline.RetirarCacamba
 {
     public interface IRetirarCacamba
     {
-        Task<NotificationResult> RetiraCacamba();
+        Task<Result> RetiraCacamba();
     }
 }

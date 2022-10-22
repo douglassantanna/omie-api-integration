@@ -32,9 +32,7 @@ namespace omie_poc.Omie.Servico
             catch (FlurlHttpException ex)
             {
                 var errors = await ex.GetResponseJsonAsync<OmieErrorResult>();
-                return new Result("Request não pode ser nulo", false, errors);
-                // return new("Ocorreu um erro na requisicao. Tente novamente.", new OmieCriarCacambaResult(errors), false);
-
+                return new Result("", false, errors);
             }
         }
     }

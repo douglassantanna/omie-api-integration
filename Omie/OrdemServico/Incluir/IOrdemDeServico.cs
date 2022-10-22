@@ -5,6 +5,6 @@ namespace omie_poc.Omie.OrdemServico.Incluir
 {
     public interface IOrdemDeServico
     {
-        Task<NotificationResult> IncluirOS(OrdemDeServicoRequest request);
+        Task<Result> IncluirOS(OrdemDeServicoRequest request);
     }
 }

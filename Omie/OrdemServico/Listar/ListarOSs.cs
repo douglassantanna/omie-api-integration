@@ -11,7 +11,7 @@ namespace omie_api_integration.Omie.OrdemServico.Listar
 {
     public interface IListarOS
     {
-        public Task<NotificationResult> ListarOS(ListarOSRequest request);
+        public Task<Result> ListarOS(ListarOSRequest request);
     }
     public class ListarOSs : IListarOS
     {
@@ -21,7 +21,7 @@ namespace omie_api_integration.Omie.OrdemServico.Listar
         {
             _httpClient = httpClient;
         }
-        public async Task<NotificationResult> ListarOS(ListarOSRequest request)
+        public async Task<Result> ListarOS(ListarOSRequest request)
         {
             var response = await _httpClient.BaseAddress
              .WithHeader("Content-type", "application/json")
@@ -32,11 +32,11 @@ namespace omie_api_integration.Omie.OrdemServico.Listar
             if (response.StatusCode > 300)
             {
                 var error = await response.GetJsonAsync<OmieErrorResult>();
-                return new NotificationResult().Failure().ShowMessage($"{error}");
+                return new("", false, error);
             }
             var responseString = await response.GetStringAsync();
             var responseDeserialized = JsonConvert.DeserializeObject<ListarOSResponse>(responseString);
-            return new NotificationResult().Ok().ShowResult(responseDeserialized);
+            return new("", true, responseDeserialized);
         }
     }
 }

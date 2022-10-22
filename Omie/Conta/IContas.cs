@@ -1,9 +1,10 @@
 using System.Threading.Tasks;
+using omie_api_integration.Shared;
 
 namespace omie_poc.Omie.Conta
 {
     public interface IContas
     {
-        Task<object> GetContas(ContaRequest request);
+        Task<Result> GetContas(ContaRequest request);
     }
 }

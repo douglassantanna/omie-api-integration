@@ -28,6 +28,11 @@ namespace omie_poc.Omie.Servico
             Cabecalho cabecalho = new(request.Numero, request.Volume);
             OmieCriarServicoRequest criarServico = new(intIncluir, cabecalho);
             var omieResponse = await _mediator.Send(criarServico);
+            if (!omieResponse.Sucesso)
+            {
+                _logger.LogError("erro na requisição");
+                return omieResponse;
+            }
             return omieResponse;
         }
     }

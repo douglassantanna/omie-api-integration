@@ -5,6 +5,6 @@ namespace omie_api_integration.ColetasOnline.EnviarCacambaLocal
 {
     public interface IEnviarCacambaLocal
     {
-        Task<NotificationResult> EnviaCacamba();
+        Task<Result> EnviaCacamba();
     }
 }

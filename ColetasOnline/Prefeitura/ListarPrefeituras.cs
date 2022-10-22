@@ -15,17 +15,17 @@ namespace omie_api_integration.ColetasOnline.Prefeitura
             _httpClient = httpClient;
         }
 
-        public async Task<NotificationResult> ObterPrefeituras()
+        public async Task<Result> ObterPrefeituras()
         {
             try
             {
                 var body = File.ReadAllText("lista-prefeituras.xml");
                 var request = await RequestSoap(body);
-                return new NotificationResult().Ok().ShowResult(request);
+                return new("", true, request);
             }
             catch (System.Exception ex)
             {
-                return new NotificationResult().Failure().ShowMessage($"{ex.Message}");
+                throw;
             }
         }
         private async Task<string> RequestSoap(string request)

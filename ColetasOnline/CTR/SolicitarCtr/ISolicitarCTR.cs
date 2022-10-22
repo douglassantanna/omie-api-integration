@@ -5,7 +5,7 @@ namespace omie_api_integration.ColetasOnline.CTR.SolicitarCtr
 {
     public interface ISolicitarCTR
     {
-        Task<NotificationResult> SolicitaCTR();
+        Task<Result> SolicitaCTR();
 
     }
 }

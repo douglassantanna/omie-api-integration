@@ -11,7 +11,7 @@ namespace omie_api_integration.Omie.OrdemServico.Validar
 {
     public interface IValidarOS
     {
-        public Task<NotificationResult> ValidarOS(ValidarOSRequest request);
+        public Task<Result> ValidarOS(ValidarOSRequest request);
     }
     public class ValidarOSs : IValidarOS
     {
@@ -22,7 +22,7 @@ namespace omie_api_integration.Omie.OrdemServico.Validar
             _httpClient = httpClient;
         }
 
-        public async Task<NotificationResult> ValidarOS(ValidarOSRequest request)
+        public async Task<Result> ValidarOS(ValidarOSRequest request)
         {
             var response = await _httpClient.BaseAddress
               .WithHeader("Content-type", "application/json")
@@ -33,11 +33,11 @@ namespace omie_api_integration.Omie.OrdemServico.Validar
             if (response.StatusCode > 300)
             {
                 var error = await response.GetJsonAsync<OmieErrorResult>();
-                return new NotificationResult().Failure().ShowMessage($"{error}");
+                return new("", false, error);
             }
             var responseString = await response.GetStringAsync();
             var responseDeserialized = JsonConvert.DeserializeObject<ValidarOSResponse>(responseString);
-            return new NotificationResult().Ok().ShowResult(responseDeserialized);
+            return new("", true, responseDeserialized);
         }
 
     }

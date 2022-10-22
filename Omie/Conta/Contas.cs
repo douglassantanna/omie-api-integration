@@ -14,7 +14,7 @@ namespace omie_poc.Omie.Conta
             _http = http;
         }
 
-        public async Task<object> GetContas(ContaRequest request)
+        public async Task<Result> GetContas(ContaRequest request)
         {
             var response = await _http.BaseAddress
             .WithHeader("Content-type", "application/json")
@@ -25,12 +25,12 @@ namespace omie_poc.Omie.Conta
 
             if (response.StatusCode != 200)
             {
-                return new NotificationResult().Failure().ShowMessage(responseString);
+                return new("", false, responseString);
             }
             else
             {
                 var conta = JsonSerializer.Deserialize<ContaResponse>(responseString);
-                return new NotificationResult().Ok().ShowResult(conta);
+                return new("", true, conta);
             }
         }
     }
