@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
@@ -27,7 +30,21 @@ namespace omie_poc.Omie.Servico
             IntIncluir intIncluir = new(request.Numero);
             Cabecalho cabecalho = new(request.Numero, request.Volume);
             OmieCriarServicoRequest criarServico = new(intIncluir, cabecalho);
+
             var omieResponse = await _mediator.Send(criarServico);
+
+            List<Xomie> dados = new();
+            dados.Add(omieResponse.Dados as Xomie);
+
+            string cCodIntServ = "";
+            long nCodServ = 0;
+
+            foreach (var dado in dados)
+            {
+                cCodIntServ = dado.cCodIntServ;
+                nCodServ = dado.nCodServ;
+            }
+
             if (!omieResponse.Sucesso)
             {
                 _logger.LogError("erro na requisição");

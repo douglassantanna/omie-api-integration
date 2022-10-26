@@ -25,8 +25,8 @@ namespace omie_poc.Omie.Servico
                 return new Result("Request não pode ser nulo", false);
             var body = new OmieRequest(
                 call: "IncluirCadastroServico",
-                app_key: "2894892105105",
-                app_secret: "176b83636bb6e913bb3790862b46b7e2",
+                app_key: "2916619416711",
+                app_secret: "04a73d6809eb4d8f7ef57eca63db7455",
                 new() { request });
 
             var result = await _servicos.CriarServico(body);

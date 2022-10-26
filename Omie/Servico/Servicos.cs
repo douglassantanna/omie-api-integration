@@ -27,13 +27,14 @@ namespace omie_poc.Omie.Servico
                  .PostJsonAsync(request)
                  .ReceiveJson<OmieCriarServicoResult>();
 
-                return new Result("", true, httpResult); ;
+                return new("", true, new Xomie(httpResult.cCodIntServ, httpResult.nCodServ));
             }
             catch (FlurlHttpException ex)
             {
                 var errors = await ex.GetResponseJsonAsync<OmieErrorResult>();
-                return new Result("", false, errors);
+                return new("", false, errors);
             }
         }
     }
 }
+public record Xomie(string cCodIntServ, long nCodServ);
